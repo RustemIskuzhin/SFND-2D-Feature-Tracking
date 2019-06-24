@@ -425,7 +425,34 @@ for (size_t detIndex = 0; detIndex < detectorTypeList.size(); detIndex++)
 ```
 #### 9. Log the time it takes for keypoint detection and descriptor extraction. The results must be entered into a spreadsheet and based on this data, the TOP3 detector / descriptor combinations must be recommended as the best choice for our purpose of detecting keypoints on vehicles.
 
+I created a loop in code to test all possible combinations of detectors and descriptors and saved the results in a [CSV file](https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/Time.csv).
+
 MidTermProject_Camera_Student.cpp
 ```c++
+std::string FileName3 = "/home/workspace/SFND_2D_Feature_Matching/Time.csv";
 
+int time_match_keyponts[detectorTypeList.size()][descriptorTypeList.size()][imgEndIndex+1];
+
+time_match_keyponts[detIndex][desIndex][imgIndex] = (t1 + t2) * 1000.0;
+
+// Creating an object of CSVWriter
+CSVWriter writer3(FileName3);
+
+// Creating a vector of strings
+std::vector<std::string> header3 = { "Detector+Descriptor type", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+// Adding vector to CSV File
+writer3.addDatainRow(header3.begin(), header3.end());
+for (size_t detIndex = 0; detIndex < detectorTypeList.size(); detIndex++)
+{ 
+    for (size_t desIndex = 0; desIndex < descriptorTypeList.size(); desIndex++)
+    { 
+        std::vector<std::string> dataList3; 
+        std::string det_des_str = detectorTypeList[detIndex] + "/" + descriptorTypeList[desIndex];                     
+        dataList3.push_back(det_des_str);
+        for (int i = 0; i < 10; i++)
+            dataList3.push_back(std::to_string(time_match_keyponts[detIndex][desIndex][i]));
+        // Wrote number of detector keyponts to csv file.
+        writer3.addDatainRow(dataList3.begin(), dataList3.end());
+    }
+}   
 ```
