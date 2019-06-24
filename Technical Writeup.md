@@ -371,13 +371,13 @@ for (size_t detIndex = 0; detIndex < detectorTypeList.size(); detIndex++)
 ```
 Below results are shown for test images.
 [//]: # (Image References)
-[image1]: ./images/SHITOMASI.png
-[image2]: ./images/HARRIS.jpg
-[image3]: ./images/FAST.jpg
-[image4]: ./images/BRISK.jpg
-[image5]: ./images/ORB.png
-[image6]: ./images/AKAZE.png
-[image7]: ./images/SIFT.png
+[image1]: ../images/SHITOMASI.png
+[image2]: ../images/HARRIS.jpg
+[image3]: ../images/FAST.jpg
+[image4]: ../images/BRISK.jpg
+[image5]: ../images/ORB.png
+[image6]: ../images/AKAZE.png
+[image7]: ../images/SIFT.png
 
 SHITOMASI
 ![alt text][image1]
