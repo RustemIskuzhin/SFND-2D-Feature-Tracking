@@ -385,9 +385,43 @@ SIFT and ORB detectors have small amount of groups of keypoints. Other detectors
 
 #### 8. Count the number of matched keypoints for all 10 images using all possible combinations of detectors and descriptors. In the matching step, the BF approach is used with the descriptor distance ratio set to 0.8.
 
+I created a loop in code to test all possible combinations of detectors and descriptors and saved the results in a [CSV file](https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/Matching.csv).
+
 MidTermProject_Camera_Student.cpp
 ```c++
+std::string FileName2 = "/home/workspace/SFND_2D_Feature_Matching/Matching.csv";
 
+std::vector<std::string> descriptorTypeList = {"BRISK",  "BRIEF", "ORB", "FREAK"};
+
+int match_keyponts[detectorTypeList.size()][descriptorTypeList.size()][imgEndIndex-1];
+
+for (size_t desIndex = 0; desIndex < descriptorTypeList.size(); desIndex++)
+{  
+    string  descriptorType  = descriptorTypeList[desIndex];
+    vector<DataFrame> dataBuffer; // list of data frames which are held in memory at the same time
+    ...
+}
+
+// Creating an object of CSVWriter
+CSVWriter writer2(FileName2);
+
+// Creating a vector of strings
+std::vector<std::string> header2 = { "Detector+Descriptor type", "1", "2", "3", "4", "5", "6", "7", "8"};
+// Adding vector to CSV File
+writer2.addDatainRow(header2.begin(), header2.end());
+for (size_t detIndex = 0; detIndex < detectorTypeList.size(); detIndex++)
+{ 
+    for (size_t desIndex = 0; desIndex < descriptorTypeList.size(); desIndex++)
+    { 
+        std::vector<std::string> dataList2; 
+        std::string det_des_str = detectorTypeList[detIndex] + "/" + descriptorTypeList[desIndex];                     
+        dataList2.push_back(det_des_str);
+           for (int i = 2; i < 10; i++)
+               dataList2.push_back(std::to_string(match_keyponts[detIndex][desIndex][i]));
+        // Wrote number of detector keyponts to csv file.
+        writer2.addDatainRow(dataList2.begin(), dataList2.end());
+    }
+}   
 ```
 #### 9. Log the time it takes for keypoint detection and descriptor extraction. The results must be entered into a spreadsheet and based on this data, the TOP3 detector / descriptor combinations must be recommended as the best choice for our purpose of detecting keypoints on vehicles.
 
