@@ -369,6 +369,30 @@ for (size_t detIndex = 0; detIndex < detectorTypeList.size(); detIndex++)
     writer.addDatainRow(dataList.begin(), dataList.end());
 }   
 ```
+Below results are shown for test images.
+[//]: # (Image References)
+[image1]: ./images/SHITOMASI.png
+[image2]: ./images/HARRIS.jpg
+[image3]: ./images/FAST.jpg
+[image4]: ./images/BRISK.jpg
+[image5]: ./images/ORB.png
+[image6]: ./images/AKAZE.png
+[image7]: ./images/SIFT.png
+
+SHITOMASI
+![alt text][image1]
+HARRIS
+![alt text][image2]
+FAST
+![alt text][image3]
+BRISK
+![alt text][image4]
+ORB
+![alt text][image5]
+AKAZE
+![alt text][image6]
+SIFT
+![alt text][image7]
 
 #### 8. Count the number of matched keypoints for all 10 images using all possible combinations of detectors and descriptors. In the matching step, the BF approach is used with the descriptor distance ratio set to 0.8.
 MidTermProject_Camera_Student.cpp
