@@ -370,24 +370,16 @@ for (size_t detIndex = 0; detIndex < detectorTypeList.size(); detIndex++)
 }   
 ```
 Below results are shown for test images.
-[//]: # (Image References)
-[image1]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/SHITOMASI.png
-[image2]: (https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/HARRIS.png)
-[image3]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/FAST.png
-[image4]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/BRISK.png
-[image5]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/ORB.png
-[image6]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/AKAZE.png
-[image7]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/SIFT.png
 
 DETECTOR  | IMAGE               | Number of keypoints
 --------  | --------------------| -------------------
 SHITOMASI | ![alt text](https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/SHITOMASI.png) | 111-125
-HARRIS    | ![alt text][image2] | 14-43
-FAST      | ![alt text][image3] | 138-156
-BRISK     | ![alt text][image4] | 254-297
-ORB       | ![alt text][image5] | 92-130
-AKAZE     | ![alt text][image6] | 155-179
-SIFT      | ![alt text][image7] | 124-159
+HARRIS    | ![alt text](https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/HARRIS.png)    | 14-43
+FAST      | ![alt text](https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/FAST.png)      | 138-156
+BRISK     | ![alt text](https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/BRISK.png)     | 254-297
+ORB       | ![alt text](https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/ORB.png)       | 92-130
+AKAZE     | ![alt text](https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/AKAZE.png)     | 155-179
+SIFT      | ![alt text](https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/SIFT.png)      | 124-159
 
 #### 8. Count the number of matched keypoints for all 10 images using all possible combinations of detectors and descriptors. In the matching step, the BF approach is used with the descriptor distance ratio set to 0.8.
 MidTermProject_Camera_Student.cpp
