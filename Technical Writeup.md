@@ -286,10 +286,90 @@ else if (selectorType.compare("SEL_KNN") == 0)
 }
 ```
 #### 7. Count the number of keypoints on the preceding vehicle for all 10 images and take note of the distribution of their neighborhood size. Do this for all the detectors you have implemented.
+
+I created a class to save the number of keypoints in a CSV file.
+
 MidTermProject_Camera_Student.cpp
 ```c++
+std::string FileName = "/home/workspace/SFND_2D_Feature_Matching/Output.csv";
 
+// A class to create and write data in a csv file.
+class CSVWriter
+{
+	std::string fileName;
+	std::string delimeter;
+	int linesCount;
+ 
+public:
+	CSVWriter(std::string filename, std::string delm = ",") :
+			fileName(filename), delimeter(delm), linesCount(0)
+	{}
+	/*
+	 * Member function to store a range as comma seperated value
+	 */
+	template<typename T>
+	void addDatainRow(T first, T last);
+};
+
+/*
+* This Function accepts a range and appends all the elements in the range
+* to the last row, seperated by delimeter (Default is comma)
+*/
+template<typename T>
+void CSVWriter::addDatainRow(T first, T last)
+{
+    std::fstream file;
+    // Open the file in truncate mode if first line else in Append Mode
+    file.open(fileName, std::ios::out | (linesCount ? std::ios::app : std::ios::trunc));
+    // Iterate over the range and add each lement to file seperated by delimeter.
+    for (; first != last; )
+    {
+        file << *first;
+        if (++first != last)
+            file << delimeter;
+        }
+    file << "\n";
+    linesCount++;
+    // Close the file
+    file.close();
+}
 ```
+
+I created a loop in code to test the different detectors and saved the results in a [CSV file]().
+
+MidTermProject_Camera_Student.cpp
+```c++
+std::vector<std::string> detectorTypeList = { "SHITOMASI", "HARRIS", "FAST", "BRISK", "ORB", "AKAZE", "SIFT"};
+  
+// create variables to csv file 
+int det_keyponts [detectorTypeList.size()][imgEndIndex+1];
+  
+/* MAIN LOOP OVER ALL DETECTORS*/
+for (size_t detIndex = 0; detIndex < detectorTypeList.size(); detIndex++)
+{ 
+    string  detectorType = detectorTypeList[detIndex];
+    ...
+}
+
+// Creating an object of CSVWriter
+CSVWriter writer(FileName);
+
+// Creating a vector of strings
+std::vector<std::string> header = { "Detector type", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+ 
+// Adding vector to CSV File
+writer.addDatainRow(header.begin(), header.end());
+for (size_t detIndex = 0; detIndex < detectorTypeList.size(); detIndex++)
+{ 
+    std::vector<std::string> dataList; 
+    dataList.push_back(detectorTypeList[detIndex]);
+    for (int i = 0; i < 10; i++)
+        dataList.push_back(std::to_string(det_keyponts[detIndex][i]));
+    // Wrote number of detector keyponts to csv file.
+    writer.addDatainRow(dataList.begin(), dataList.end());
+}   
+```
+
 #### 8. Count the number of matched keypoints for all 10 images using all possible combinations of detectors and descriptors. In the matching step, the BF approach is used with the descriptor distance ratio set to 0.8.
 MidTermProject_Camera_Student.cpp
 ```c++
