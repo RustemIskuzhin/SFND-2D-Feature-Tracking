@@ -458,6 +458,8 @@ for (size_t detIndex = 0; detIndex < detectorTypeList.size(); detIndex++)
 ```
 
 The TOP3 detector / descriptor combinations as the best choice for our purpose of detecting keypoints on vehicles are:
-FAST+BRIEF: 117 keypoints for 1,4 ms in average.
-FAST+ORB: 119 keypoints for 1,7 ms in average.
-FAST+BRISK: 80 keypoints for 2 ms in average.
+DETECTOR/DESCRIPTOR  | NUMBER OF KEYPOINTS | TIME
+-------------------- | --------------------| -------------------
+FAST+BRIEF           | 117 keypoints       | 1,4 ms
+FAST+ORB             | 119 keypoints       | 1,7 ms
+FAST+BRISK           | 80 keypoints        | 2 ms 
