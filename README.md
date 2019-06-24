@@ -35,4 +35,4 @@ See the classroom instruction and code comments for more details on each of thes
 
 ## Technical Writeup
 
-[Technical Writeup](../Technical Writeup.md)
+[Technical Writeup](https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/Technical%20Writeup.md)
