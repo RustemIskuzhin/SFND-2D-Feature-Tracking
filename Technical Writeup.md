@@ -371,28 +371,23 @@ for (size_t detIndex = 0; detIndex < detectorTypeList.size(); detIndex++)
 ```
 Below results are shown for test images.
 [//]: # (Image References)
-[image1]: ../images/SHITOMASI.png
-[image2]: ../images/HARRIS.jpg
-[image3]: ../images/FAST.jpg
-[image4]: ../images/BRISK.jpg
-[image5]: ../images/ORB.png
-[image6]: ../images/AKAZE.png
-[image7]: ../images/SIFT.png
+[image1]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/SHITOMASI.png
+[image2]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/HARRIS.png
+[image3]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/FAST.png
+[image4]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/BRISK.png
+[image5]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/ORB.png
+[image6]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/AKAZE.png
+[image7]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/SIFT.png
 
-SHITOMASI
-![alt text][image1]
-HARRIS
-![alt text][image2]
-FAST
-![alt text][image3]
-BRISK
-![alt text][image4]
-ORB
-![alt text][image5]
-AKAZE
-![alt text][image6]
-SIFT
-![alt text][image7]
+DETECTOR  | IMAGE               | Number of keypoints
+--------  | --------------------| -------------------
+SHITOMASI | ![alt text][image1] | 111-125
+HARRIS    | ![alt text][image2] | 14-43
+FAST      | ![alt text][image3] | 138-156
+BRISK     | ![alt text][image4] | 254-297
+ORB       | ![alt text][image5] | 92-130
+AKAZE     | ![alt text][image6] | 155-179
+SIFT      | ![alt text][image7] | 124-159
 
 #### 8. Count the number of matched keypoints for all 10 images using all possible combinations of detectors and descriptors. In the matching step, the BF approach is used with the descriptor distance ratio set to 0.8.
 MidTermProject_Camera_Student.cpp
