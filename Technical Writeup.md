@@ -381,7 +381,7 @@ Below results are shown for test images.
 
 DETECTOR  | IMAGE               | Number of keypoints
 --------  | --------------------| -------------------
-SHITOMASI | ![alt text][image1] | 111-125
+SHITOMASI | ![alt text][https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/SHITOMASI.png] | 111-125
 HARRIS    | ![alt text][image2] | 14-43
 FAST      | ![alt text][image3] | 138-156
 BRISK     | ![alt text][image4] | 254-297
