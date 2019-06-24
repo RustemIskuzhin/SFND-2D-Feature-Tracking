@@ -372,7 +372,7 @@ for (size_t detIndex = 0; detIndex < detectorTypeList.size(); detIndex++)
 Below results are shown for test images.
 [//]: # (Image References)
 [image1]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/SHITOMASI.png
-[image2]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/HARRIS.png
+[image2]: (https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/HARRIS.png)
 [image3]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/FAST.png
 [image4]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/BRISK.png
 [image5]: https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/ORB.png
@@ -381,7 +381,7 @@ Below results are shown for test images.
 
 DETECTOR  | IMAGE               | Number of keypoints
 --------  | --------------------| -------------------
-SHITOMASI | ![alt text][https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/SHITOMASI.png] | 111-125
+SHITOMASI | ![alt text](https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/SHITOMASI.png) | 111-125
 HARRIS    | ![alt text][image2] | 14-43
 FAST      | ![alt text][image3] | 138-156
 BRISK     | ![alt text][image4] | 254-297
