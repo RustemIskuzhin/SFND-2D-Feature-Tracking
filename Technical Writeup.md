@@ -381,12 +381,16 @@ ORB       | ![alt text](https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracki
 AKAZE     | ![alt text](https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/AKAZE.png)     | 155-179
 SIFT      | ![alt text](https://github.com/RustemIskuzhin/SFND-2D-Feature-Tracking/blob/master/images/SIFT.png)      | 124-159
 
+SIFT and ORB detectors have small amount of groups of keypoints. Other detectors (SHITOMASI, HARRIS, FATS, BRISK, AKAZE) have big amount of groups of keypoints or separate keypoints.
+
 #### 8. Count the number of matched keypoints for all 10 images using all possible combinations of detectors and descriptors. In the matching step, the BF approach is used with the descriptor distance ratio set to 0.8.
+
 MidTermProject_Camera_Student.cpp
 ```c++
 
 ```
 #### 9. Log the time it takes for keypoint detection and descriptor extraction. The results must be entered into a spreadsheet and based on this data, the TOP3 detector / descriptor combinations must be recommended as the best choice for our purpose of detecting keypoints on vehicles.
+
 MidTermProject_Camera_Student.cpp
 ```c++
 
